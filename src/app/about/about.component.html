@@ -1,0 +1,43 @@
+<p></p>
+<div class="container col-6">
+    <div class="card">
+        <div class="card-header">
+            About component
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <ul class="list-group list-group-flush col-6">
+                    <li class="list-group-item"><strong>Name : </strong> {{info.name}}</li>
+                    <li class="list-group-item"><strong>Tel : </strong>{{info.tel}}</li>
+                    <li class="list-group-item"><strong>Email :</strong> {{info.email}}</li>
+                </ul>
+                <div>
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-1">
+                            <label for="comment" class="sr-only">Comment</label>
+                            <input type="text" [(ngModel)]="comment.message" class="form-control" name="comment"
+                                id="comment" placeholder="Comment...">
+                        </div>
+                        <button type="button" (click)="addComment()" class="btn btn-primary mb-1">Add comment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div *ngIf="comments.length > 0; else noComment">
+            <h3>Liste des commentaires</h3>
+            <ul class="list-group">
+                <li *ngFor="let comment of comments"
+                    class="list-group-item d-flex justify-content-between align-items-center">
+                    {{comment.message}}
+                    <span class="badge badge-primary badge-pill"> {{ comment.date | date: 'dd-MM-yyyy à hh:mm'}}</span>
+                </li>
+            </ul>
+        </div>
+
+        <ng-template #noComment>
+            <h3>Aucun commentaire !</h3>
+        </ng-template>
+    </div>
+</div>
