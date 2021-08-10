@@ -7,6 +7,7 @@ import { IdentityComponent } from './identity/identity.component';
 import { AddressComponent } from './address/address.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from 'src/app/services/user.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,7 +15,9 @@ import { UserService } from 'src/app/services/user.service';
   imports: [
     CommonModule,
     UserRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [UserService]
 })

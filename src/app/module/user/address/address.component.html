@@ -1,1 +1,69 @@
-<p>address works!</p>
+<p></p>
+<div class="container col-6">
+    <div class="card">
+        <div class="card-header">
+            User Idenetity component
+        </div>
+        <div class="card-body">
+            <form class="needs-validation" novalidate [formGroup]="form"
+                (ngSubmit)="onSubmit()" autocomplete="off">
+                <div class="form-group">
+                    <label for="name">Full name</label>
+                    <input type="text" formControlName="name"class="form-control" placeholder="full name"
+                        [ngClass]="{'is-invalid': submitted && form.controls.name.errors}">
+                    <div *ngIf="submitted && form.controls.name.errors" class="invalid-feedback">
+                        Please name is required.
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="tel">Tel</label>
+                        <input type="text" formControlName="tel" class="form-control" [ngClass]="{'is-invalid': submitted && form.controls.tel.errors}">
+                        <div *ngIf="submitted && form.controls.tel.errors" class="invalid-feedback">
+                            <span *ngIf="submitted && form.controls.tel.errors.required">Please tel is required.</span>
+                            <span *ngIf="submitted && form.controls.tel.errors.pattern">Phone number is not
+                                valid.</span>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" formControlName="email" class="form-control" [ngClass]="{'is-invalid': submitted && form.controls.email.errors}">
+                        <div *ngIf="submitted && form.controls.email.errors" class="invalid-feedback">
+                            <span *ngIf="submitted && form.controls.email.errors.required">Please email is
+                                required.</span>
+                            <span *ngIf="submitted && form.controls.email.errors.email">Email is not valid.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="password">Password</label>
+                        <input type="password" formControlName="password" class="form-control"
+                            [ngClass]="{'is-invalid': submitted && form.controls.password.errors}">
+                        <div *ngIf="submitted && form.controls.password.errors" class="invalid-feedback">
+                            <span *ngIf="submitted && form.controls.password.errors.required">Please password is
+                                required.</span>
+                            <span *ngIf="submitted && form.controls.password.errors.minlength">Password must be at least
+                                6 characters.</span>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="confirmPassword">Confirm password</label>
+                        <input type="password" formControlName="confirmPassword" class="form-control"
+                            [ngClass]="{'is-invalid': submitted && form.controls.confirmPassword.errors}">
+                        <div *ngIf="submitted && form.controls.confirmPassword.errors" class="invalid-feedback">
+                            <span *ngIf="submitted && form.controls.confirmPassword.errors.required">Please confirm
+                                password is required.</span>
+                            <span *ngIf="submitted && form.controls.confirmPassword.errors?.mustMatch">Confirm
+                                password must match.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-primary" type="submit">Submit form</button> &nbsp;
+                    <button class="btn btn-secondary" type="button" (click)="onCancel()">Clear form</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
