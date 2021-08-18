@@ -25,17 +25,8 @@ export class IdentityComponent implements OnInit {
       });
   }
 
-  onSubmit(form: NgForm): void {
-    if (form.valid) {
-      this.users.push({ ... this.user });
-      alert(JSON.stringify(this.user, null, 4));
-      this.onCancel(form);
-    }
-  }
-
-  onCancel(form: NgForm): void {
-    this.user = new User();
-    form.resetForm();
+  addUser(_user: User): void {
+    this.users.push(_user);
   }
 
 }

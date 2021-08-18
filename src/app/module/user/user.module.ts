@@ -8,10 +8,12 @@ import { AddressComponent } from './address/address.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from 'src/app/services/user.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IdentityFormComponent } from './identity/identity-form/identity-form.component';
+import { IdentityListComponent } from './identity/identity-list/identity-list.component';
 
 
 @NgModule({
-  declarations: [UserComponent, IdentityComponent, AddressComponent],
+  declarations: [UserComponent, IdentityComponent, AddressComponent, IdentityFormComponent, IdentityListComponent],
   imports: [
     CommonModule,
     UserRoutingModule,

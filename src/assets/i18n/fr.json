@@ -1,0 +1,18 @@
+{
+  "login": {
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "loginButton": "Login",
+    "forgotPassword": "Mot de passe oublié?",
+    "validationMessage": {
+      "usernameRequired": "Le Nom d'utilisateur est requis",
+      "passwordRequired": "Le mot de passe est requis"
+    }
+  },
+  "home": {
+    "greeting": "Bonjour <strong>{{username}}</strong>"
+  },
+  "alert": {
+    "popupText": "Vou serez déconnecté dans {{time}} secondes."
+  }
+}

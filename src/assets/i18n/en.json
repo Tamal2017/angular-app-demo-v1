@@ -1,0 +1,18 @@
+{
+  "login": {
+    "username": "Username",
+    "password": "Password",
+    "loginButton": "Login",
+    "forgotPassword": "Forgot your password?",
+    "validationMessage": {
+      "usernameRequired": "Username is required",
+      "passwordRequired": "Password is required"
+    }
+  },
+  "home": {
+    "greeting": "Hello <strong>{{username}}</strong>"
+  },
+  "alert": {
+    "popupText": "You will be logged out in {{time}} seconds."
+  }
+}

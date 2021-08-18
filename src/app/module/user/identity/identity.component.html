@@ -1,73 +1,7 @@
 <p></p>
 <div class="container col-6">
-    <div class="card">
-        <div class="card-header">
-            User Idenetity component
-        </div>
-        <div class="card-body">
-            <form class="needs-validation" novalidate name="userForm" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)"
-                autocomplete="off">
-                <div class="form-group">
-                    <label for="name">Full name</label>
-                    <input type="text" name="name" id="name" #name="ngModel"
-                        [ngClass]="{'is-invalid': userForm.submitted && name.errors}" required [(ngModel)]="user.name"
-                        class="form-control" placeholder="full name">
-                    <div class="invalid-feedback">
-                        Please name required.
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="tel">Tel</label>
-                        <input type="text" name="tel" id="tel" #tel="ngModel"
-                            [ngClass]="{'is-invalid': userForm.submitted && tel.errors}" required [(ngModel)]="user.tel"
-                            class="form-control" pattern="^(\d{9}$)|(^\d{2}[-\.\s]\d{3}[-\.\s]\d{2}[-\.\s]\d{2})$">
-                        <div *ngIf="userForm.submitted && tel.errors" class="invalid-feedback">
-                            <span *ngIf="userForm.submitted && tel.errors.required">Please tel is required.</span> 
-                            <span *ngIf="userForm.submitted && tel.errors.pattern">Tel number is not valid.</span>
-                        </div>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" #email="ngModel"
-                            [ngClass]="{'is-invalid': userForm.submitted && email.errors}" required
-                            [(ngModel)]="user.email" class="form-control" id="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                        <div *ngIf="userForm.submitted && email.errors" class="invalid-feedback">
-                          <span *ngIf="userForm.submitted && email.errors.required">Please email is required.</span> 
-                          <span *ngIf="userForm.submitted && email.errors.pattern">Email is not valid.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="pull-right">
-                    <button class="btn btn-primary" type="submit">Submit form</button> &nbsp;
-                    <button class="btn btn-secondary" type="button" (click)="onCancel(userForm)">Clear form</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div>
-        <div *ngIf="users.length > 0; else noUser">
-            <h4>Identity list</h4>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let user of users">
-                        <td>{{user.name}}</td>
-                        <td>{{user.tel}}</td>
-                        <td>{{user.email}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
 
-        <ng-template #noUser>
-            <h3>Empty list !</h3>
-        </ng-template>
-    </div>
+  <app-identity-form [user]="user" (addUserEvent)="addUser($event)"></app-identity-form>
+  <app-identity-list [users]="users"></app-identity-list>
+
 </div>
