@@ -10,6 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IdentityFormComponent } from './identity/identity-form/identity-form.component';
 import { IdentityListComponent } from './identity/identity-list/identity-list.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { IdentityListComponent } from './identity/identity-list/identity-list.co
     UserRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule
   ],
   providers: [UserService]
 })

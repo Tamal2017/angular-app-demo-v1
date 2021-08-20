@@ -10,9 +10,22 @@
     }
   },
   "home": {
-    "greeting": "Bonjour <strong>{{username}}</strong>"
+    "greeting": "Bonjour {{username}}",
+    "welcome": "Bonjour et bien venu!"
   },
   "alert": {
     "popupText": "Vou serez déconnecté dans {{time}} secondes."
+  },
+  "USER": {
+    "USER_NAME": "Nom d'utilisateur",
+    "USER_TEL": "Numéro de téléphone",
+    "EMAIL": "Email",
+    "USER_FORM":{
+      "ACTION": {
+        "SUBMIT": "Enregistrer",
+        "CANCEL": "Annuler"
+      }
+    }
   }
+
 }

@@ -1,0 +1,29 @@
+{
+  "login": {
+    "username": "Username",
+    "password": "Password",
+    "loginButton": "Login",
+    "forgotPassword": "Forgot your password?",
+    "validationMessage": {
+      "usernameRequired": "Username is required",
+      "passwordRequired": "Password is required"
+    }
+  },
+  "home": {
+    "greeting": "Hello {{username}}"
+  },
+  "alert": {
+    "popupText": "You will be logged out in {{time}} seconds."
+  },
+  "USER": {
+    "USER_NAME": "Username",
+    "USER_TEL": "Phone number",
+    "EMAIL": "Email",
+    "USER_FORM":{
+      "ACTION": {
+        "SUBMIT": "Submit form",
+        "CANCEL": "Cancel form"
+      }
+    }
+  }
+}

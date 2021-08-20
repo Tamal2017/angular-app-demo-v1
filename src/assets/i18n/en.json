@@ -10,9 +10,21 @@
     }
   },
   "home": {
-    "greeting": "Hello <strong>{{username}}</strong>"
+    "greeting": "Hello {{username}}",
+    "welcome": "Hello and welcome!"
   },
   "alert": {
     "popupText": "You will be logged out in {{time}} seconds."
+  },
+  "USER": {
+    "USER_NAME": "Username",
+    "USER_TEL": "Phone number",
+    "EMAIL": "Email",
+    "USER_FORM":{
+      "ACTION": {
+        "SUBMIT": "Submit form",
+        "CANCEL": "Cancel form"
+      }
+    }
   }
 }
