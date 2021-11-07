@@ -1,6 +1,6 @@
 # AppDemo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.3.
+Project to show how to develop a complete Angular application through the breakdown into module, component, subcomponent, inter-component communication, lazy loading and internationalization (This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.3).
 
 ## Development server
 
